@@ -44,7 +44,7 @@ class Main {
     else if (userChoice.equalsIgnoreCase("Change")) {
       System.out.print("Range: ");
       range = sc.nextInt();
-      System.out.println("Minimum: ");
+      System.out.print("Minimum: ");
       min = sc.nextInt();
     }
 
