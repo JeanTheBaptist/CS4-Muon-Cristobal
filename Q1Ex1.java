@@ -1,9 +1,7 @@
-public class Mu06_Cristobal {
-    /**
-     * @param args the command line arguments
-     */
+class Main {
+  
     public static void main(String[] args) {
-        // TODO code application logic here
+      
         var studentOne = "Brent";
         var studentTwo = "JD";
         var studentThr = "Ivan";
@@ -60,5 +58,4 @@ public class Mu06_Cristobal {
         System.out.println("They play a total of " + hoursPlayedTotal + " hours everyday." );
         }
     }
-    
 
