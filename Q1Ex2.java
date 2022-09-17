@@ -5,8 +5,10 @@ class Main {
     Scanner sc = new Scanner(System.in);
     String userChoice, restart;
     int guess;
-    int range = 10;
+    int max = 10;
     int min = 1;
+    int range = max - min;
+    int numGuess = 3;
 
     while (true) {
       System.out.println("");
@@ -19,8 +21,8 @@ class Main {
       
       while (userChoice.equalsIgnoreCase("Start")) {
         int random = (int) Math.floor(Math.random()*range) + min;
-        for (int i=0;i<3;i++) {
-          System.out.println("You have used " + i + "/3 of your guesses.");
+        for (int i=0;i<numGuess;i++) {
+          System.out.println("You have used " + i + "/" + numGuess + " of your guesses.");
           System.out.print("What is your guess? ");
   ;       guess = sc.nextInt();
           sc.nextLine();
@@ -42,6 +44,7 @@ class Main {
         System.out.print("Do you want to play again (Y/N)? ");
         restart = sc.nextLine();
         if (restart.equalsIgnoreCase("Y")) {
+          System.out.println("");
           continue;
         }
 
@@ -51,11 +54,14 @@ class Main {
       }
   
       while (userChoice.equalsIgnoreCase("Change")) {
-        System.out.print("Range: ");
-        range = sc.nextInt();
+        System.out.print("Maximum: ");
+        max = sc.nextInt();
         sc.nextLine();
         System.out.print("Minimum: ");
         min = sc.nextInt();
+        sc.nextLine();
+        System.out.print("No. of Guesses: ");
+        numGuess = sc.nextInt();
         sc.nextLine();
         break;
       }
